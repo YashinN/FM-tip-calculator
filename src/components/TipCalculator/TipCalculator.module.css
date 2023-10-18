@@ -1,8 +1,8 @@
 .main_display {
   background-color: #fff;
-  width: 57.5rem;
+  max-width: 57.5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(5rem, 25.8rem) minmax(5rem, 25.8rem);
   border-radius: 1.55rem;
   padding: 2rem;
   gap: 3rem;
