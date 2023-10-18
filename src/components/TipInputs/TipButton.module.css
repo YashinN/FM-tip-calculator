@@ -1,0 +1,13 @@
+.tip_btn {
+  color: #fff;
+  border: none;
+  background-color: #1d484c;
+  border-radius: 0.31rem;
+  height: 3rem;
+  width: 140px;
+  font-size: 1.5rem;
+}
+
+.tip_btn:hover {
+  background-color: #9fe8df;
+}
