@@ -1,6 +1,7 @@
 .main_display {
   background-color: #fff;
   max-width: 57.5rem;
+  height: 30rem;
   display: grid;
   grid-template-columns: minmax(5rem, 25.8rem) minmax(5rem, 25.8rem);
   border-radius: 1.55rem;
