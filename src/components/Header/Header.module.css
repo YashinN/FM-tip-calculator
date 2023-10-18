@@ -1,0 +1,7 @@
+.header_top {
+  display: block;
+}
+
+.main_header span {
+  text-transform: uppercase;
+}
