@@ -1,0 +1,30 @@
+.display_container {
+  background-color: #1d484c;
+  height: 26.1rem;
+  border-radius: 0.9rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result_name {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.amount_display {
+  font-size: 3rem;
+  color: #5fc3af;
+}
+
+.result_subscript {
+  font-size: 0.81rem;
+  color: #7f9d9f;
+}
