@@ -5,3 +5,7 @@
 .main_header span {
   text-transform: uppercase;
 }
+
+.main_header {
+  text-align: center;
+}
