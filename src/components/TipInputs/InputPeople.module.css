@@ -1,0 +1,34 @@
+.input_wrapper {
+  position: relative;
+}
+
+.people_input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  font-family: "Space Mono", monospace, "sans-serif";
+  text-align: right;
+  font-size: 1.5rem;
+  color: #1d484c;
+  background-color: #f3f9fa;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.31rem;
+  padding-right: 1rem;
+}
+
+.people_input:focus {
+  outline-color: #26c2ae;
+}
+
+.people_input:hover {
+  border: 1px solid #26c2ae;
+  outline-color: #26c2ae;
+}
+
+.people_icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
