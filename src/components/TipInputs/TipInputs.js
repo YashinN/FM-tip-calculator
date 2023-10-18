@@ -1,10 +1,14 @@
 import styles from "./TipInputs.module.css";
 import InputBill from "./InputBill";
+import SelectTip from "./SelectTip";
+import InputPeople from "./InputPeople";
 
 const TipInputs = () => {
   return (
-    <form>
+    <form className={styles.selection_form}>
       <InputBill />
+      <SelectTip />
+      <InputPeople />
     </form>
   );
 };
