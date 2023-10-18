@@ -1,4 +1,5 @@
 import styles from "./TipDisplay.module.css";
+import ResetButton from "./ResetButton";
 
 const TipDisplay = () => {
   return (
@@ -13,6 +14,7 @@ const TipDisplay = () => {
           <p className={styles.amount_display}>$0.00</p>
         </div>
       </div>
+      <ResetButton />
     </div>
   );
 };

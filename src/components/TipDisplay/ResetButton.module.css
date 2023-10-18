@@ -1,0 +1,9 @@
+.reset_btn {
+  font-size: 1.25rem;
+  background-color: #5fc3af;
+  color: #1d484c;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 0.32rem;
+  height: 3rem;
+}
