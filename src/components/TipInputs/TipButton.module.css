@@ -1,7 +1,5 @@
 .tip_btn {
-  color: #fff;
   border: none;
-  background-color: #1d484c;
   border-radius: 0.31rem;
   height: 3rem;
   font-size: 1.5rem;
@@ -9,4 +7,14 @@
 
 .tip_btn:hover {
   background-color: #9fe8df;
+}
+
+.tip_btn_selected {
+  color: #1d484c;
+  background-color: #5fc3af;
+}
+
+.tip_btn_standard {
+  color: #fff;
+  background-color: #1d484c;
 }
