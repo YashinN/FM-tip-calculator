@@ -3,13 +3,13 @@ import InputBill from "./InputBill";
 import SelectTip from "./SelectTip";
 import InputPeople from "./InputPeople";
 
-const TipInputs = () => {
+const TipInputs = ({ bill, setBill }) => {
   return (
-    <form className={styles.selection_form}>
-      <InputBill />
+    <div className={styles.selection_form}>
+      <InputBill bill={bill} setBill={setBill} />
       <SelectTip />
       <InputPeople />
-    </form>
+    </div>
   );
 };
 
