@@ -8,6 +8,7 @@ import TipInputs from "./components/TipInputs/TipInputs";
 function App() {
   const [bill, setBill] = useState("");
   const [tipPercentage, setTipPercentage] = useState(null);
+  const [numPeople, setNumPeople] = useState("");
 
   return (
     <>
@@ -19,6 +20,8 @@ function App() {
             setBill={setBill}
             tipPercentage={tipPercentage}
             setTipPercentage={setTipPercentage}
+            numPeople={numPeople}
+            setNumPeople={setNumPeople}
           />
           <TipDisplay />
         </TipCalculator>

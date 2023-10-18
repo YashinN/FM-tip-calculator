@@ -3,7 +3,14 @@ import InputBill from "./InputBill";
 import SelectTip from "./SelectTip";
 import InputPeople from "./InputPeople";
 
-const TipInputs = ({ bill, setBill, tipPercentage, setTipPercentage }) => {
+const TipInputs = ({
+  bill,
+  setBill,
+  tipPercentage,
+  setTipPercentage,
+  numPeople,
+  setNumPeople,
+}) => {
   return (
     <div className={styles.selection_form}>
       <InputBill bill={bill} setBill={setBill} />
@@ -11,7 +18,7 @@ const TipInputs = ({ bill, setBill, tipPercentage, setTipPercentage }) => {
         tipPercentage={tipPercentage}
         setTipPercentage={setTipPercentage}
       />
-      <InputPeople />
+      <InputPeople setNumPeople={setNumPeople} numPeople={numPeople} />
     </div>
   );
 };
