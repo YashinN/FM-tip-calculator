@@ -1,7 +1,13 @@
 .main_display {
   background-color: #fff;
-  max-width: 57.5rem;
+  width: 57.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 1.55rem;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.result_name {
+  font-size: 1rem;
 }
