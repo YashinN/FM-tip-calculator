@@ -11,7 +11,7 @@ const InputPeople = ({ numPeople, dispatch }) => {
           className={styles.people_input}
           value={numPeople}
           placeholder="0"
-          type="text"
+          type="number"
           onBlur={(e) => (e.target.placeholder = "0")}
           onFocus={(e) => (e.target.placeholder = "")}
           onChange={(e) => {

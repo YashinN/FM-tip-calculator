@@ -34,7 +34,6 @@ const reducer = (state, action) => {
       return { ...state, total: action.payload };
     case "resetResults":
       return { ...state, tipAmount: "0.00", total: "0.00" };
-
     default:
       throw new Error("Action unknown");
   }
@@ -57,9 +56,7 @@ function App() {
       dispatch({ type: "calcTotal", payload: totalPerPerson.toFixed(2) });
     }
 
-    if (!isCalc) {
-      dispatch({ type: "resetResults" });
-    }
+    if (!isCalc) dispatch({ type: "resetResults" });
   }, [bill, tipPercentage, numPeople, isCalc]);
 
   return (

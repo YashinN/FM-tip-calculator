@@ -11,6 +11,7 @@
   cursor: pointer;
   border-radius: 0.31rem;
   padding-right: 1rem;
+  caret-color: #26c2ae;
 }
 
 .custom_input:focus {

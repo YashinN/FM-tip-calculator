@@ -15,6 +15,7 @@
   cursor: pointer;
   border-radius: 0.31rem;
   padding-right: 1rem;
+  caret-color: #26c2ae;
 }
 
 .people_input:focus {
@@ -31,4 +32,9 @@
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.people_input::-webkit-outer-spin-button,
+.people_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
