@@ -8,9 +8,9 @@ import TipInputs from "./components/TipInputs/TipInputs";
 const roundOff = (val) => Math.floor(val * 100) / 100;
 
 function App() {
-  const [bill, setBill] = useState(null);
+  const [bill, setBill] = useState("");
   const [tipPercentage, setTipPercentage] = useState(null);
-  const [numPeople, setNumPeople] = useState(null);
+  const [numPeople, setNumPeople] = useState("");
   const [tipAmount, setTipAmount] = useState("0.00");
   const [total, setTotal] = useState("0.00");
 
@@ -44,7 +44,14 @@ function App() {
             numPeople={numPeople}
             setNumPeople={setNumPeople}
           />
-          <TipDisplay tipAmount={tipAmount} total={total} isCalc={isCalc} />
+          <TipDisplay
+            tipAmount={tipAmount}
+            total={total}
+            isCalc={isCalc}
+            setNumPeople={setNumPeople}
+            setBill={setBill}
+            setTipPercentage={setTipPercentage}
+          />
         </TipCalculator>
       </Main>
     </>
