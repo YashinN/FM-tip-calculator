@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Main from "./components/Main";
 import Header from "./components/Header/Header";
 import TipCalculator from "./components/TipCalculator/TipCalculator";
 import TipDisplay from "./components/TipDisplay/TipDisplay";
 import TipInputs from "./components/TipInputs/TipInputs";
 
+const roundOff = (val) => Math.ceil(val * 100) / 100;
+
 function App() {
-  const [bill, setBill] = useState("");
+  const [bill, setBill] = useState(null);
   const [tipPercentage, setTipPercentage] = useState(null);
-  const [numPeople, setNumPeople] = useState("");
+  const [numPeople, setNumPeople] = useState(null);
+  const [tipAmount, setTipAmount] = useState("0.00");
+  const [total, setTotal] = useState("0.00");
+
+  useEffect(() => {
+    if (bill && tipPercentage && numPeople) {
+      const billAmount = Number(bill);
+      const tipPerPerson = (billAmount * (tipPercentage / 100)) / numPeople;
+      const totalPerPerson = billAmount / numPeople + tipPerPerson;
+      setTipAmount(roundOff(tipPerPerson).toFixed(2));
+      setTotal(roundOff(totalPerPerson).toFixed(2));
+    }
+  }, [bill, tipPercentage, numPeople]);
 
   return (
     <>
@@ -23,7 +37,7 @@ function App() {
             numPeople={numPeople}
             setNumPeople={setNumPeople}
           />
-          <TipDisplay />
+          <TipDisplay tipAmount={tipAmount} total={total} />
         </TipCalculator>
       </Main>
     </>
