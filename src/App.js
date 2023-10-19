@@ -13,6 +13,7 @@ function App() {
   const [numPeople, setNumPeople] = useState("");
   const [tipAmount, setTipAmount] = useState("0.00");
   const [total, setTotal] = useState("0.00");
+  const [isCustom, setIsCustom] = useState(false);
 
   const isCalc = bill && tipPercentage && numPeople;
 
@@ -43,6 +44,8 @@ function App() {
             setTipPercentage={setTipPercentage}
             numPeople={numPeople}
             setNumPeople={setNumPeople}
+            isCustom={isCustom}
+            setIsCustom={setIsCustom}
           />
           <TipDisplay
             tipAmount={tipAmount}
@@ -51,6 +54,7 @@ function App() {
             setNumPeople={setNumPeople}
             setBill={setBill}
             setTipPercentage={setTipPercentage}
+            setIsCustom={setIsCustom}
           />
         </TipCalculator>
       </Main>

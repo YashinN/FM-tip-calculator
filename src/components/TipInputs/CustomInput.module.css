@@ -17,6 +17,10 @@
   outline-color: #26c2ae;
 }
 
+.custom_input_active {
+  border: 1px solid #26c2ae;
+}
+
 .custom_input:hover {
   border: 1px solid #26c2ae;
   outline-color: #26c2ae;

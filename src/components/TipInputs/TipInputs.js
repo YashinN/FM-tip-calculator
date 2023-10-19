@@ -10,8 +10,8 @@ const TipInputs = ({
   setTipPercentage,
   numPeople,
   setNumPeople,
-  customTip,
-  setCustomTip,
+  isCustom,
+  setIsCustom,
 }) => {
   return (
     <div className={styles.selection_form}>
@@ -19,8 +19,8 @@ const TipInputs = ({
       <SelectTip
         tipPercentage={tipPercentage}
         setTipPercentage={setTipPercentage}
-        customTip={customTip}
-        setCustomTip={setCustomTip}
+        isCustom={isCustom}
+        setIsCustom={setIsCustom}
       />
       <InputPeople setNumPeople={setNumPeople} numPeople={numPeople} />
     </div>

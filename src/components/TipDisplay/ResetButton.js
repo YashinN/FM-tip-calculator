@@ -1,10 +1,17 @@
 import styles from "./ResetButton.module.css";
 
-const ResetButton = ({ isCalc, setBill, setNumPeople, setTipPercentage }) => {
+const ResetButton = ({
+  isCalc,
+  setBill,
+  setNumPeople,
+  setTipPercentage,
+  setIsCustom,
+}) => {
   const handleReset = () => {
     setBill("");
     setNumPeople("");
     setTipPercentage(null);
+    setIsCustom(false);
   };
   return (
     <button

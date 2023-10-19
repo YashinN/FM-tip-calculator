@@ -10,10 +10,13 @@ const CustomInput = ({
     setIsCustom(true);
     setTipPercentage("");
   };
+
   return (
     <input
       placeholder="Custom"
-      className={styles.custom_input}
+      className={`${styles.custom_input} ${
+        isCustom ? styles.custom_input_active : ""
+      }`}
       type="number"
       onChange={(e) => {
         e.preventDefault();

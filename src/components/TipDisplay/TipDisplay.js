@@ -8,6 +8,7 @@ const TipDisplay = ({
   setBill,
   setNumPeople,
   setTipPercentage,
+  setIsCustom,
 }) => {
   return (
     <div className={styles.display_container}>
@@ -34,6 +35,7 @@ const TipDisplay = ({
         setBill={setBill}
         setTipPercentage={setTipPercentage}
         setNumPeople={setNumPeople}
+        setIsCustom={setIsCustom}
       />
     </div>
   );
