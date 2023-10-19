@@ -3,6 +3,7 @@
   border-radius: 0.31rem;
   height: 3rem;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .tip_btn:hover {

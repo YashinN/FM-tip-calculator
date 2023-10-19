@@ -14,8 +14,10 @@ function App() {
   const [tipAmount, setTipAmount] = useState("0.00");
   const [total, setTotal] = useState("0.00");
 
+  const isCalc = bill && tipPercentage && numPeople;
+
   useEffect(() => {
-    if (bill && tipPercentage && numPeople) {
+    if (isCalc) {
       const billAmount = Number(bill);
       const tipPerPerson = (billAmount * (tipPercentage / 100)) / numPeople;
       const totalPerPerson = billAmount / numPeople + tipPerPerson;
