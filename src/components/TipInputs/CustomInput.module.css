@@ -21,3 +21,8 @@
   border: 1px solid #26c2ae;
   outline-color: #26c2ae;
 }
+
+.custom_input::-webkit-outer-spin-button,
+.custom_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

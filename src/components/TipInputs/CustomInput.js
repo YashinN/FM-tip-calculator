@@ -14,7 +14,7 @@ const CustomInput = ({
     <input
       placeholder="Custom"
       className={styles.custom_input}
-      type="text"
+      type="number"
       onChange={(e) => {
         e.preventDefault();
         setTipPercentage(e.target.value);
