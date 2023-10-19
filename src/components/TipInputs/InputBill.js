@@ -10,7 +10,7 @@ const InputBill = ({ bill, setBill }) => {
         <input
           placeholder="0"
           className={styles.bill_input}
-          type="text"
+          type="number"
           value={bill}
           onChange={(e) => {
             e.preventDefault();

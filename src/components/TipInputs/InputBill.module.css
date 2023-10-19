@@ -32,3 +32,8 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+.bill_input::-webkit-outer-spin-button,
+.bill_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
