@@ -24,6 +24,11 @@ function App() {
       setTipAmount(roundOff(tipPerPerson).toFixed(2));
       setTotal(totalPerPerson.toFixed(2));
     }
+
+    if (!isCalc) {
+      setTipAmount("0.00");
+      setTotal("0.00");
+    }
   }, [bill, tipPercentage, numPeople]);
 
   return (
