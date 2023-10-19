@@ -1,7 +1,7 @@
 import styles from "./TipDisplay.module.css";
 import ResetButton from "./ResetButton";
 
-const TipDisplay = ({ total, tipAmount }) => {
+const TipDisplay = ({ total, tipAmount, isCalc }) => {
   return (
     <div className={styles.display_container}>
       <div className={styles.results}>
@@ -22,7 +22,7 @@ const TipDisplay = ({ total, tipAmount }) => {
         <p className={styles.amount_display}>${total}</p>
       </div>
 
-      <ResetButton />
+      <ResetButton isCalc={isCalc} />
     </div>
   );
 };
