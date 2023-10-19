@@ -1,18 +1,12 @@
-import { useState } from "react";
 import TipButton from "./TipButton";
 import styles from "./SelectTip.module.css";
 import CustomInput from "./CustomInput";
 
-const SelectTip = ({
-  tipPercentage,
-  setTipPercentage,
-  isCustom,
-  setIsCustom,
-}) => {
+const SelectTip = ({ tipPercentage, isCustom, dispatch }) => {
   const tipOptions = [5, 10, 15, 25, 50, "custom"];
   const handleTipSelection = (tipVal) => {
-    setIsCustom(false);
-    setTipPercentage(tipVal);
+    dispatch({ type: "setIsCustom", payload: false });
+    dispatch({ type: "setTipPercentage", payload: tipVal });
   };
 
   return (
@@ -22,15 +16,16 @@ const SelectTip = ({
         {tipOptions.map((tip, i) =>
           tip !== "custom" ? (
             <TipButton
+              key={tip}
               tipPercentage={tipPercentage}
               tip={tip}
               onClick={handleTipSelection}
             />
           ) : (
             <CustomInput
-              setTipPercentage={setTipPercentage}
+              key={tip}
               tipPercentage={tipPercentage}
-              setIsCustom={setIsCustom}
+              dispatch={dispatch}
               isCustom={isCustom}
             />
           )

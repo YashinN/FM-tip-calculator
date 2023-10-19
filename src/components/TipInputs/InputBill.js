@@ -1,7 +1,7 @@
 import styles from "./InputBill.module.css";
 import DollarSvg from "../icons/DollarSvg";
 
-const InputBill = ({ bill, setBill }) => {
+const InputBill = ({ bill, dispatch }) => {
   return (
     <div>
       <label htmlFor="">Bill</label>
@@ -14,7 +14,7 @@ const InputBill = ({ bill, setBill }) => {
           value={bill}
           onChange={(e) => {
             e.preventDefault();
-            setBill(e.target.value);
+            dispatch({ type: "setBill", payload: e.target.value });
           }}
           onFocus={(e) => (e.target.placeholder = "")}
           onBlur={(e) => (e.target.placeholder = "0")}

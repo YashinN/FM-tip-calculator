@@ -3,26 +3,16 @@ import InputBill from "./InputBill";
 import SelectTip from "./SelectTip";
 import InputPeople from "./InputPeople";
 
-const TipInputs = ({
-  bill,
-  setBill,
-  tipPercentage,
-  setTipPercentage,
-  numPeople,
-  setNumPeople,
-  isCustom,
-  setIsCustom,
-}) => {
+const TipInputs = ({ bill, tipPercentage, isCustom, dispatch, numPeople }) => {
   return (
     <div className={styles.selection_form}>
-      <InputBill bill={bill} setBill={setBill} />
+      <InputBill bill={bill} dispatch={dispatch} />
       <SelectTip
         tipPercentage={tipPercentage}
-        setTipPercentage={setTipPercentage}
         isCustom={isCustom}
-        setIsCustom={setIsCustom}
+        dispatch={dispatch}
       />
-      <InputPeople setNumPeople={setNumPeople} numPeople={numPeople} />
+      <InputPeople numPeople={numPeople} dispatch={dispatch} />
     </div>
   );
 };

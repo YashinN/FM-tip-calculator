@@ -1,23 +1,11 @@
 import styles from "./ResetButton.module.css";
 
-const ResetButton = ({
-  isCalc,
-  setBill,
-  setNumPeople,
-  setTipPercentage,
-  setIsCustom,
-}) => {
-  const handleReset = () => {
-    setBill("");
-    setNumPeople("");
-    setTipPercentage(null);
-    setIsCustom(false);
-  };
+const ResetButton = ({ isCalc, dispatch }) => {
   return (
     <button
       className={styles.reset_btn}
       disabled={!isCalc}
-      onClick={() => handleReset()}
+      onClick={() => dispatch({ type: "reset" })}
     >
       reset
     </button>

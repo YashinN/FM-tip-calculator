@@ -1,7 +1,7 @@
 import styles from "./InputPeople.module.css";
 import PeopleSvg from "../icons/PeopleSvg";
 
-const InputPeople = ({ numPeople, setNumPeople }) => {
+const InputPeople = ({ numPeople, dispatch }) => {
   return (
     <div>
       <label htmlFor="">Number of People</label>
@@ -15,7 +15,8 @@ const InputPeople = ({ numPeople, setNumPeople }) => {
           onBlur={(e) => (e.target.placeholder = "0")}
           onFocus={(e) => (e.target.placeholder = "")}
           onChange={(e) => {
-            setNumPeople(e.target.value);
+            e.preventDefault();
+            dispatch({ type: "setNumPeople", payload: e.target.value });
           }}
         />
       </div>

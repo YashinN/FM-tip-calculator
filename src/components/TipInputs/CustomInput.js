@@ -1,14 +1,9 @@
 import styles from "./CustomInput.module.css";
 
-const CustomInput = ({
-  setTipPercentage,
-  tipPercentage,
-  setIsCustom,
-  isCustom,
-}) => {
+const CustomInput = ({ tipPercentage, isCustom, dispatch }) => {
   const handleCustom = () => {
-    setIsCustom(true);
-    setTipPercentage("");
+    dispatch({ type: "setIsCustom", payload: true });
+    dispatch({ type: "setTipPercentage", payload: "" });
   };
 
   return (
@@ -20,7 +15,7 @@ const CustomInput = ({
       type="number"
       onChange={(e) => {
         e.preventDefault();
-        setTipPercentage(e.target.value);
+        dispatch({ type: "setTipPercentage", payload: e.target.value });
       }}
       value={isCustom ? tipPercentage : ""}
       onFocus={(e) => (e.target.placeholder = "")}
