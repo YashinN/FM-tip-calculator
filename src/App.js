@@ -9,7 +9,7 @@ const roundOff = (val) => Math.floor(val * 100) / 100;
 
 function App() {
   const [bill, setBill] = useState("");
-  const [tipPercentage, setTipPercentage] = useState(null);
+  const [tipPercentage, setTipPercentage] = useState("");
   const [numPeople, setNumPeople] = useState("");
   const [tipAmount, setTipAmount] = useState("0.00");
   const [total, setTotal] = useState("0.00");
